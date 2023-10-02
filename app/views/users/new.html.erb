@@ -1,0 +1,34 @@
+<%# <form action="/users" method="post" accept-charset="UTF-8"> %>
+  <%# <label for="email">Email:</label> %>
+  <%# <input type="email" id="email" name="user[email]"><br><br> %>
+  <%# <label for="username">Username:</label> %>
+  <%# <input type="text" id="username" name="user[username]"><br><br> %>
+  <%# <label for="password">Password:</label> %>
+  <%# <input type="text" id="password" name="user[password]"><br><br> %>
+  <%# <input type="hidden" name="authenticity-token" value="<%= form_authenticity_token %> 
+  <%# <input type="submit" value="Submit"> %>
+<%# </form> %>
+
+<%# <%= form_tag('/users', method: "post") do %> 
+  <%# <%= label_tag(:email, 'email') %> 
+  <%# <%= email_field_tag(:email) %> 
+  <%# <%= label_tag(:username, 'username') %> 
+  <%# <%= text_field_tag(:username) %> 
+  <%# <%= label_tag(:password, 'password') %> 
+  <%# <%= password_field_tag(:password) %> 
+  <%# <%= submit_tag('Submit') %> 
+<%# <% end %>
+
+<h1>New User Form</h1>
+
+<%= render partial: "user", locals: { user: @user } %>
+
+ <%# form_with model: @user do |f| 
+  f.label(:email)  %>
+  <%# f.email_field(:email, placeholder: 'example@email.com') <br>
+  f.label(:username) 
+  f.text_field(:username, placeholder: 'username') <br>
+  f.label(:password) 
+  f.password_field(:password, placeholder: 'typeagreatpassword') <br>
+  f.submit('Submit') 
+end %>
